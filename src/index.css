@@ -1,16 +1,56 @@
 body {
-    background-color: powderblue;
+    background-color: #22313F;
 }
 
 h1 {
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family:'Bebas Neue';
+   font-size: 48px;
+   color: white;
+
+}
+
+h2 {
+    font-family: 'Bebas Neue';
+
 }
 
 footer {
     text-align: center;
-    margin-top: 30px;
+    font-size: 12px;
+    margin-top: 20px;
+    font-family:'Roboto Mono', monospace;
+    color: white;
+
 }
+
+ul {
+    list-style: none;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+img {
+    max-width: 75px;
+}
+
+label {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .container {
     background-color: aliceblue;
     padding: 20px;
+    margin: 0, auto;
+    max-width: 700px;
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2);
 }
