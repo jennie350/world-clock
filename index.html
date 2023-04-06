@@ -21,6 +21,7 @@
     <label for="cities">Choose a city to start </label>
     <select id="cities">
         <option value="">Select city..</option>
+        <option value="current">Current location</option>
         <option value="Europe/Berlin">Berlin</option>
         <option value="Asia/Singapore">Singapore</option>
         <option value="Australia/Brisbane">Brisbane</option>
@@ -35,7 +36,7 @@
                 <h2>Singapore</h2>
                 </div>
                 <div class="col-6">
-                    <h2>Munich</h2>
+                    <h2>Berlin</h2>
                 </div>
                 <div class="time-date">
                 <div class="row">
@@ -43,7 +44,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Clock_simple.svg/768px-Clock_simple.svg.png" alt="Clock"/>
 </div>
 <div class="col-5">
-                <ul>
+                <ul id="singapore">
                     <li id="singapore-date"></li>
                     <li id="singapore-time"></li>
                 </ul>
@@ -52,9 +53,9 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Clock_simple.svg/768px-Clock_simple.svg.png" alt="Clock"/>
                     </div>
                     <div class="col-5">
-                        <ul>
-                            <li id="munich-date"></li>
-                            <li id="munich-time"></li>
+                        <ul id="berlin">
+                            <li id="berlin-date"></li>
+                            <li id="berlin-time"></li>
                         </ul>
                         </div>
                     </div>

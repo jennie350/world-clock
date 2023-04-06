@@ -1,25 +1,25 @@
 function updateTime(){
 
 //Singapore
-
+let singaporeElement = document.querySelector("#singapore")
+if (singaporeElement){
 let singaporeDateElement = document.querySelector("#singapore-date")
-if(singaporeDateElement){
 let singaporeTimeElement= document.querySelector("#singapore-time")
 let singaporeDateTime = moment().tz("Asia/Singapore")
 
-singaporeDateElement.innerHTML= singaporeDateTime.format("dddd Mo MMMM YYYY");
-singaporeTimeElement.innerHTML=singaporeDateTime.format("hh:mm:ss a (Z [GMT])");
+singaporeDateElement.innerHTML= singaporeDateTime.format("dddd Do MMMM YYYY");
+singaporeTimeElement.innerHTML= singaporeDateTime.format("hh:mm:ss a (Z [GMT])");
 }
 
-//Munich
+//Berlin
+let berlinElement = document.querySelector("#berlin")
+if (berlinElement) {
+let berlinDateElement = document.querySelector("#berlin-date")
+let berlinTimeElement= document.querySelector("#berlin-time")
+let berlinDateTime = moment().tz("Europe/Berlin")
 
-let munichDateElement = document.querySelector("#munich-date")
-if(munichDateElement){
-let munichTimeElement= document.querySelector("#munich-time")
-let munichDateTime = moment().tz("Europe/Berlin")
-
-munichDateElement.innerHTML= munichDateTime.format("dddd Mo MMMM YYYY");
-munichTimeElement.innerHTML=munichDateTime.format("hh:mm:ss a  (Z [GMT])");
+berlinDateElement.innerHTML= berlinDateTime.format("dddd Do MMMM YYYY");
+berlinTimeElement.innerHTML= berlinDateTime.format("hh:mm:ss a  (Z [GMT])");
 }
 }
 
@@ -27,8 +27,11 @@ munichTimeElement.innerHTML=munichDateTime.format("hh:mm:ss a  (Z [GMT])");
 
 function displaySelectCity(event) {
 let selectedTimezone = event.target.value;
+if (selectedTimezone === "current") {
+    selectedTimezone = moment.tz.guess()
+}
 let cityName = selectedTimezone.split("/")[1];
-let selectedCityDate = moment().tz(selectedTimezone).format("dddd Mo MMMM YYYY");
+let selectedCityDate = moment().tz(selectedTimezone).format("dddd Do MMMM YYYY");
 let selectedCityTime = moment().tz(selectedTimezone).format("hh:mm:ss a  (Z [GMT])");
 let cityElement = document.querySelector("#city");
 
@@ -56,4 +59,5 @@ let citySelectElement = document.querySelector("#cities");
 citySelectElement.addEventListener("change", displaySelectCity)
 
 // Interval timer
+updateTime();
 setInterval(updateTime, 1000);
