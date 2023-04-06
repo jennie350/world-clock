@@ -21,6 +21,29 @@ let berlinDateTime = moment().tz("Europe/Berlin")
 berlinDateElement.innerHTML= berlinDateTime.format("dddd Do MMMM YYYY");
 berlinTimeElement.innerHTML= berlinDateTime.format("hh:mm:ss a  (Z [GMT])");
 }
+
+//Madrid
+let madridElement = document.querySelector("#madrid")
+if (madridElement) {
+let madridDateElement = document.querySelector("#madrid-date")
+let madridTimeElement= document.querySelector("#madrid-time")
+let madridDateTime = moment().tz("Europe/Madrid")
+
+madridDateElement.innerHTML= madridDateTime.format("dddd Do MMMM YYYY");
+madridTimeElement.innerHTML= madridDateTime.format("hh:mm:ss a  (Z [GMT])");
+}
+
+//Brisbane
+let brisbaneElement = document.querySelector("#brisbane")
+if (brisbaneElement) {
+let brisbaneDateElement = document.querySelector("#brisbane-date")
+let brisbaneTimeElement= document.querySelector("#brisbane-time")
+let brisbaneDateTime = moment().tz("Australia/Brisbane")
+
+brisbaneDateElement.innerHTML= brisbaneDateTime.format("dddd Do MMMM YYYY");
+brisbaneTimeElement.innerHTML= brisbaneDateTime.format("hh:mm:ss a  (Z [GMT])");
+}
+
 }
 
 //Selected city
@@ -51,6 +74,9 @@ cityElement.innerHTML= `
         <li>${selectedCityTime}</li>
     </ul>
     </div>
+    </div>
+    <div class="row">
+    <a href="index.html" class="all-cities-button">All cities</a>
     </div>
     `
 }
