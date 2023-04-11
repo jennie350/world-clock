@@ -14,6 +14,7 @@ h1 {
 
 h2 {
     font-family: 'Bebas Neue';
+    margin-top: 20px;
 
 }
 
@@ -28,13 +29,15 @@ footer {
 
 ul {
     list-style: none;
+padding: 0;
+margin: 0;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     font-size: 15px;
 }
 
 img {
-    max-width: 75px;
+    max-width: 150px;
 }
 
 label {
@@ -49,19 +52,16 @@ label {
 
 .container {
     background-color: aliceblue;
-    padding: 25px;
+    padding: 20px 0px 20px 70px;
     margin: 0, auto;
-    max-width: 800px;
+    max-width: 650px;
     box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2);
 
 }
 
-.row-two {
-    margin-top: 20px;
-}
 
 .all-cities-button {
-    background-color: aquamarine;
+    background-color: #546D8A;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -75,4 +75,10 @@ label {
     text-decoration: none;
     color: white;
 
+}
+
+.date-time {
+    display: inline;
+    flex-direction: row;
+    align-items: center;
 }

@@ -60,20 +60,13 @@ let cityElement = document.querySelector("#city");
 
 cityElement.innerHTML= `
 <div class="row">
-<div class="col-12">
     <h2>${cityName}</h2>
     </div>
-    <div class="time-date">
     <div class="row">
-        <div class="col-3">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Clock_simple.svg/768px-Clock_simple.svg.png" alt="Clock"/>
-</div>
-<div class="col-9">
     <ul>
         <li>${selectedCityDate}</li>
         <li>${selectedCityTime}</li>
     </ul>
-    </div>
     </div>
     <div class="row">
     <a href="index.html" class="all-cities-button">All cities</a>
